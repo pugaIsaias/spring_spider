@@ -1,13 +1,14 @@
 package com.example.demo.model;
 
-public class Courses {
+public class Course {
 	private Integer id;
 	private String banner;
 	private String description;
 	private String link;
 	private String name;
-	private Number price;
-	public Courses(Integer id, String banner, String description, String link, String name, Number price) {
+	private Integer price;
+	
+	public Course(Integer id, String banner, String description, String link, String name, Integer price) {
 		super();
 		this.id = id;
 		this.banner = banner;
@@ -16,6 +17,7 @@ public class Courses {
 		this.name = name;
 		this.price = price;
 	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -49,9 +51,13 @@ public class Courses {
 	public Number getPrice() {
 		return price;
 	}
-	public void setPrice(Number price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", banner=" + banner + ", description=" + description + ", link=" + link + ", name="
+				+ name + ", price=" + price + "]";
+	}
 }
