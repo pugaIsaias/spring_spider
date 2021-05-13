@@ -1,14 +1,20 @@
 package com.example.demo.model;
 
+import java.math.BigDecimal;
+
 public class Course {
 	private Integer id;
 	private String banner;
 	private String description;
 	private String link;
 	private String name;
-	private Integer price;
+	private BigDecimal price;
 	
-	public Course(Integer id, String banner, String description, String link, String name, Integer price) {
+	public Course() {
+		
+	}
+	
+	public Course(Integer id, String banner, String description, String link, String name, BigDecimal price) {
 		super();
 		this.id = id;
 		this.banner = banner;
@@ -51,7 +57,7 @@ public class Course {
 	public Number getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 

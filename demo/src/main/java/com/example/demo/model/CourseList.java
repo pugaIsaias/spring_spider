@@ -1,12 +1,15 @@
 package com.example.demo.model;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CourseList {
+	
+	@Autowired
+	private List<Course> list;
 
-	private ArrayList<Course> list = new ArrayList<Course>();
-
-	public ArrayList<Course> getList() {
+	public List<Course> getList() {
 		return list;
 	}
 	

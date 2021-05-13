@@ -10,8 +10,4 @@ public interface DAO<T> {
 		void create(T t);
 
 		Optional<T> get(int id);
-
-		void update(T t, int id);
-
-		void delete(int id);
 }

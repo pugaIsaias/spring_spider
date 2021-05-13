@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,13 +19,12 @@ public class CourseController {
 	
 	@PostMapping("/course")
 	public Course addCourse(@RequestBody Course c) {
-		System.out.println(c);
-		this.dao.addCourse(c);
+		this.dao.create(c);
 		return c;
 	}
 	
 	@GetMapping("/course")
-	public ArrayList<Course> getCourses(){
-		return this.dao.getCourses();
+	public List<Course> getCourses(){
+		return this.dao.list();
 	}
 }
