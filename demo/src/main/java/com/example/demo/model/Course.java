@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class Course {
 	private Integer id;
-	private String banner;
 	private String description;
 	private String link;
 	private String name;
@@ -14,10 +13,9 @@ public class Course {
 		
 	}
 	
-	public Course(Integer id, String banner, String description, String link, String name, BigDecimal price) {
+	public Course(Integer id, String description, String link, String name, BigDecimal price) {
 		super();
 		this.id = id;
-		this.banner = banner;
 		this.description = description;
 		this.link = link;
 		this.name = name;
@@ -30,12 +28,7 @@ public class Course {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getBanner() {
-		return banner;
-	}
-	public void setBanner(String banner) {
-		this.banner = banner;
-	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -63,7 +56,7 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [id=" + id + ", banner=" + banner + ", description=" + description + ", link=" + link + ", name="
+		return "Course [id=" + id + ", description=" + description + ", link=" + link + ", name="
 				+ name + ", price=" + price + "]";
 	}
 }

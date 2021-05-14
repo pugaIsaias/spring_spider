@@ -27,4 +27,5 @@ public class CourseController {
 	public List<Course> getCourses(){
 		return this.dao.list();
 	}
+	
 }

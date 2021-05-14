@@ -14,7 +14,6 @@ public class CourseMapper implements RowMapper<Course> {
 		// TODO Auto-generated method stub
 		Course course = new Course();
 		course.setId(rs.getInt("id"));
-		course.setBanner(rs.getString("banner"));
 		course.setDescription(rs.getString("description"));
 		course.setLink(rs.getString("link"));
 		course.setName(rs.getString("name"));

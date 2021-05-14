@@ -17,14 +17,14 @@ public class CourseDAO implements DAO<Course> {
 
 	@Override
 	public List<Course> list() {
-		String sql = "SELECT id, banner, description, link, name, price from course";
+		String sql = "SELECT id, description, link, name, price FROM `course`";
 		return this.jdbTemplate.query(sql, new CourseMapper());
 	}
 
 	@Override
 	public void create(Course t) {
-		String sql = "INSERT INTO course (banner, description, link, name, price) values (?, ?, ?, ?, ?)";
-		this.jdbTemplate.update(sql, t.getBanner(), t.getDescription(), t.getLink(), t.getName(), t.getPrice());
+		String sql = "INSERT INTO `course` (description, link, name, price) VALUES (?, ?, ?, ?)";
+		this.jdbTemplate.update(sql, t.getDescription(), t.getLink(), t.getName(), t.getPrice());
 		
 	}
 
